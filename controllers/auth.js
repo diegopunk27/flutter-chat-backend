@@ -107,7 +107,7 @@ const renewToken= async function (req, res=response){
     try {
         res.json({
             ok:true,
-            msg:usuarioDB,
+            usuario:usuarioDB,
             jwt
         });
     } catch (error) {

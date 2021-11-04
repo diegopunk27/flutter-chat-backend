@@ -5,7 +5,8 @@ const dbConecction= function(){
         mongoose.connect(process.env.DB_CNN, {
             useNewUrlParser: true,
             useUnifiedTopology:true,
-            useCreateIndex:true
+            useCreateIndex:true,
+            useFindAndModify: false, //Evita que findByIdAndUpdate genere warning por Deprecation
         });
         console.log('DB online');
     }catch(error){
